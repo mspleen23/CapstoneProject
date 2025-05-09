@@ -61,13 +61,11 @@ try{
     trailerURL: "https://youtu.be/BWZt4v6b1hI"
 },
 ) 
-res.status(201).json({sucess:'Database seeded.'})
-// .redirect('/movies'); //means create it and then redirect to the users route where all the movies will be found
+res.status(201).redirect('/movies'); //means create it and then redirect to the users route where all the movies will be found
 } catch(error) {
     res.status(400).json({error: error.message })
 }
 }
-
 
 async function getMovies(req,res){
     try{
@@ -87,6 +85,17 @@ async function deletedMovie(req,res){
     }
 }
 
+async function updateMovie(req,res){
+    try{
+        const updateMovie= await Movie.findByIdAndUpdate(req.params.id,req.body, {new: true});
+        res.status(200).redirect('/movies');
+    }catch(error){
+        res.status(400).json({error: error.message});
+    }
+    }
+
+
+
 // async function createMovie(req,res){
 //     try{
 //         const movie= await Movie.create(req.body);
@@ -98,14 +107,7 @@ async function deletedMovie(req,res){
 
 
 
-// async function updateMovie(req,res){
-//     try{
-//         const updateMovie= await Movie.findByIdAndUpdate(req.params.id,req.body, {new: true});
-//         res.status(200).redirect('/movies');
-//     }catch(error){
-//         res.status(400).json({error: error.message});
-//     }
-//     }
+
 
 //     async function getMovie(req,res){
 //         try{
@@ -120,8 +122,8 @@ async function deletedMovie(req,res){
 export{
     seedMovies,
     getMovies,
-    // createMovie,
     deletedMovie,
-    // updateMovie,
+    updateMovie,
+    // createMovie,
     // getMovie, 
  }

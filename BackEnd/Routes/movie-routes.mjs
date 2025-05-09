@@ -8,8 +8,8 @@ const router = express.Router();
 //Seed
 router.get('/seed', moviesController.seedMovies );
 
-// //Index
-// router.get('/', moviesController.getMovies);
+//Index
+router.get('/', moviesController.getMovies);
 
 // //Delete
 // router.delete('/:id', moviesController.deleteMovie);

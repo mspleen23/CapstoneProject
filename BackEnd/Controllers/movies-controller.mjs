@@ -69,15 +69,14 @@ res.status(201).json({sucess:'Database seeded.'})
 }
 
 
-
-// async function getMovies(req,res){
-//     try{
-//         const movies= await Movie.find({});
-//         res.status(200).json(movies);
-//     }catch(error){
-//         res.status(400).json({error: error.message});
-//     }
-// }
+async function getMovies(req,res){
+    try{
+        const movies= await Movie.find({});
+        res.status(200).json(movies);
+    }catch(error){
+        res.status(400).json({error: error.message});
+    }
+}
 
 // async function createMovie(req,res){
 //     try{
@@ -118,7 +117,7 @@ res.status(201).json({sucess:'Database seeded.'})
 
 export{
     seedMovies,
-    // getMovies,
+    getMovies,
     // createMovie,
     // deleteMovie,
     // updateMovie,

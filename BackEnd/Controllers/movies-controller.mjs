@@ -78,6 +78,15 @@ async function getMovies(req,res){
     }
 }
 
+async function deletedMovie(req,res){
+    try{
+        const deletedMovie = await Movie.findByIdAndDelete(req.params.id);
+        res.status(200).redirect('/movies');
+    }catch(error){
+        res.status(400).json({error: error.message});
+    }
+}
+
 // async function createMovie(req,res){
 //     try{
 //         const movie= await Movie.create(req.body);
@@ -87,14 +96,7 @@ async function getMovies(req,res){
 //     }
 // }
 
-// async function deleteMovie(req,res){
-//         try{
-//             const deleteMovie = await Movie.findByIdAndDelete(req.params.id);
-//             res.status(200).redirect('/movies');
-//         }catch(error){
-//             res.status(400).json({error: error.message});
-//         }
-// }
+
 
 // async function updateMovie(req,res){
 //     try{
@@ -119,7 +121,7 @@ export{
     seedMovies,
     getMovies,
     // createMovie,
-    // deleteMovie,
+    deletedMovie,
     // updateMovie,
     // getMovie, 
  }

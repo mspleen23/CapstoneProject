@@ -11,8 +11,8 @@ router.get('/seed', moviesController.seedMovies );
 //Index
 router.get('/', moviesController.getMovies);
 
-// //Delete
-// router.delete('/:id', moviesController.deleteMovie);
+//Delete
+router.delete('/:id', moviesController.deletedMovie);
 
 // //Update
 // router.put('/:id', moviesController.updateMovie)

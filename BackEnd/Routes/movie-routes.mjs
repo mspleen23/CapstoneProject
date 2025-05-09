@@ -17,11 +17,11 @@ router.delete('/:id', moviesController.deletedMovie);
 //Update
 router.put('/:id', moviesController.updateMovie)
 
-// //Create
-// router.post('/', moviesController.createMovie);
+//Create
+router.post('/', moviesController.createdMovie);
 
-// //Show 
-// router.get('/:id', moviesController.getMovie);
+//Show 
+router.get('/:id', moviesController.getMovie);
 
 
 

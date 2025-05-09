@@ -95,28 +95,23 @@ async function updateMovie(req,res){
     }
 
 
+async function createdMovie(req,res){
+    try{
+        const createdMovie= await Movie.create(req.body);
+        res.status(201).json(createdMovie);
+    }catch(error){
+        res.status(400).json({error: error.message});
+    }
+}
 
-// async function createMovie(req,res){
-//     try{
-//         const movie= await Movie.create(req.body);
-//         res.status(201).json(movie);
-//     }catch(error){
-//         res.status(400).json({error: error.message});
-//     }
-// }
-
-
-
-
-
-//     async function getMovie(req,res){
-//         try{
-//             const getMovie= await Movie.findById(req.params.id);
-//             res.status(200).json(getMovie);
-//         }catch(error){
-//             res.status(400).json({error: error.message});
-//         }
-//     }
+ async function getMovie(req,res){
+        try{
+            const movie= await Movie.findById(req.params.id);
+            res.status(200).json(movie);
+        }catch(error){
+            res.status(400).json({error: error.message});
+        }
+    }
 
 
 export{
@@ -124,6 +119,6 @@ export{
     getMovies,
     deletedMovie,
     updateMovie,
-    // createMovie,
-    // getMovie, 
+    createdMovie,
+    getMovie, 
  }

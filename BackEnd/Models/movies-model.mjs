@@ -6,9 +6,9 @@ const movieSchema= new mongoose.Schema(
     movieName: {type: String, required: true}, 
     genre: {type: String,required: true},
     year: {type: Number, required: true},
-    description:{type: String, required:true, maxlength:280},
+    description:{type: String, required:true, maxlength:500},
     rating: {type:String}, 
-    review: {type:String},
+    review: {type:String, maxlength:500},
     watched:{type: Boolean, default: false},
     posterURL:{type: String, default: "https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-768x1129.jpg"},
     trailerURL:{type: String, default:'https://www.youtube.com/embed/dQw4w9WgXcQ'}

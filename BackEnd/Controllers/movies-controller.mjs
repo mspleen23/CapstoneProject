@@ -61,7 +61,8 @@ try{
     trailerURL: "https://youtu.be/BWZt4v6b1hI"
 },
 ) 
-res.status(201).redirect('/movies'); //means create it and then redirect to the users route where all the movies will be found
+res.status(201).json({sucess:'Database seeded.'})
+// .redirect('/movies'); //means create it and then redirect to the users route where all the movies will be found
 } catch(error) {
     res.status(400).json({error: error.message })
 }

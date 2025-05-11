@@ -2,6 +2,7 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Routes, Route} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 import './App.css'
 
 import HomePage from './pages/HomePage/HomePage';
@@ -14,14 +15,14 @@ function App() {
   return(
     <div className="App"> 
     <NavBar/>
-    
     <Routes>
       <Route path="/" element={<HomePage/>} />
       <Route path="/watchlist" element={<Watchlist/>} />
       <Route path="/movies" element={<MovieShowPage/>} />
       <Route path="/create" element={<CreateTracker/>} />
     </Routes>
-   
+    
+   <Footer/>
     </div>
   );
 }

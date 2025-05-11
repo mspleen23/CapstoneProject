@@ -9,20 +9,20 @@
     margin-left: 220px; /* aligns with sidebar */
   }
   
-  .footer-links {
+  /* .footer-links {
     margin-top: 0.5rem;
-  }
+  } */
   
-  .footer-links a {
+  /* .footer-links a {
     color: #ccc;
     margin: 0 10px;
     text-decoration: none;
-  }
+  } */
   
-  .footer-links a:hover {
+  /* .footer-links a:hover {
     text-decoration: underline;
     color: white;
-  }
+  } */
   
   /* Mobile-friendly */
   @media (max-width: 768px) {

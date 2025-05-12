@@ -58,8 +58,8 @@
   
   .profile-img {
     width: 50px;
-    border-radius: 50%;
-    padding-bottom: .2rem;
+    padding-bottom: 50%;
+    border-radius: 5%;
   }
   
   /* Responsive */

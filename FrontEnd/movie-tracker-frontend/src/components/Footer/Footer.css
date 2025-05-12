@@ -1,28 +1,19 @@
 .footer {
-    width: 100%;
+    position:relative;
+    width: 115%;
     background-color: #222;
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: relative;
     bottom: 0;
-    margin-left: 220px; /* aligns with sidebar */
+    margin-left: 100px; 
   }
-  
-  /* .footer-links {
-    margin-top: 0.5rem;
-  } */
-  
-  /* .footer-links a {
-    color: #ccc;
-    margin: 0 10px;
-    text-decoration: none;
-  } */
-  
-  /* .footer-links a:hover {
-    text-decoration: underline;
-    color: white;
-  } */
+
+  .content {
+    padding-bottom: 0px;
+    margin-left: 100px;
+    text-align: center;
+  }
   
   /* Mobile-friendly */
   @media (max-width: 768px) {

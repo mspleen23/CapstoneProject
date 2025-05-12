@@ -1,28 +1,28 @@
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Routes, Route} from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
+// import NavBar from './components/NavBar/NavBar';
+// import Footer from './components/Footer/Footer';
 import './App.css'
 
-import HomePage from './pages/HomePage/HomePage';
-import Watchlist from './pages/MoviesViewPage/MoviesViewPage';
-import MovieShowPage from './pages/MovieShowPage/MovieShowPage';
-import CreateTracker from './pages/CreateTrackerPage/CreateTracker';
+import HomePage from './pages/HomePage/HomePage.jsx'
+// import Watchlist from './pages/MoviesViewPage/MoviesViewPage';
+// import MovieShowPage from './pages/MovieShowPage/MovieShowPage';
+// import CreateTracker from './pages/CreateTrackerPage/CreateTracker';
 
 
 function App() {
   return(
     <div className="App"> 
-    <NavBar/>
+    {/* <NavBar/> */}
     <Routes>
       <Route path="/" element={<HomePage/>} />
-      <Route path="/watchlist" element={<Watchlist/>} />
+      {/* <Route path="/watchlist" element={<Watchlist/>} />
       <Route path="/movies" element={<MovieShowPage/>} />
-      <Route path="/create" element={<CreateTracker/>} />
+      <Route path="/create" element={<CreateTracker/>} /> */}
     </Routes>
     
-   <Footer/>
+   {/* <Footer/> */}
     </div>
   );
 }

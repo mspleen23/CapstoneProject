@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "./MovieViewPage.css";
+
 
 export default function MovieViewPage() {
   const [viewpage, setViewpage] = useState([]);
@@ -30,7 +32,7 @@ export default function MovieViewPage() {
         {viewpage && viewpage.map((movie) => (
             <div key={movie._id} className="movie-card">
               <img src={movie.posterURL} alt={movie.movieName} />
-              <h3>{movie.movieName}</h3>
+              <Link to={`/movies/${movie._id}`}><h3>{movie.movieName}</h3></Link>
               <p>{movie.year}</p>
             </div>
           ))}

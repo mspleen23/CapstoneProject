@@ -8,6 +8,7 @@ import './App.css'
 import HomePage from './pages/HomePage/HomePage.jsx'
 import CreateTracker from './pages/CreateTracker/CreateTracker.jsx';
 import MovieViewPage from './pages/MovieViewPage/MovieViewPage.jsx';
+import MovieShowPage from './pages/MovieShowPage/MovieShowPage.jsx';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<HomePage/>} />
       <Route path="/create" element={<CreateTracker/>} /> 
       <Route path="/movieviewpage" element={<MovieViewPage/>}/>
+      <Route path= "/movies/:id" element={<MovieShowPage/>}/>
     </Routes>
    <Footer/>
     </div>

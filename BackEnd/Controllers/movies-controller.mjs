@@ -57,7 +57,7 @@ try{
     rating: "⭐⭐⭐⭐", 
     review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu molestie magna. Vestibulum quis rhoncus felis. Ut volutpat consequat magna sit amet feugiat. Morbi rutrum mi nec augue tempor, vitae viverra felis tincidunt.",
     watched:true,
-    posterURL: "https://static.wikia.nocookie.net/pineappleexpress/images/4/49/Pineapple_express_ver4_xlg.jpg/revision/latest?cb=20140215024716" ,
+    posterURL: "",
     trailerURL: "https://youtu.be/BWZt4v6b1hI"
 },
 ) 

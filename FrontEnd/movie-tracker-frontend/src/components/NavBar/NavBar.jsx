@@ -15,7 +15,7 @@ export default function NavBar() {
       <nav>
         <ul>
           <li><Link to="/">Home</Link></li>
-          <li><Link to="/watchlist">Movie View Page</Link></li>
+          <li><Link to="/movieviewpage">Movie View Page</Link></li>
           <li><Link to="/create">Create Movie Tracker</Link></li>
         </ul>
       </nav>

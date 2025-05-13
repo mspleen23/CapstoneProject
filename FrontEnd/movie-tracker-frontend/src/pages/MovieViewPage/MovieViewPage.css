@@ -1,0 +1,42 @@
+.main {
+    margin-left: 150px; 
+    padding-top: 30px;
+    height:100%;
+    background: linear-gradient(135deg, #283b4f, #001317);
+    color: white;
+    padding-bottom: 250px;
+    text-align: center;
+  }
+
+  header{
+    padding-top: 45px;
+  }
+
+
+  .movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .movie-card {
+    background-color: #223139;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-card h3 {
+    margin-top:1rem
+  }

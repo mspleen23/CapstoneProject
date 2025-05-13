@@ -1,6 +1,6 @@
 .footer {
     position:relative;
-    width: 115%;
+    width: 100%;
     background-color: #222;
     color: white;
     text-align: center;
@@ -11,7 +11,7 @@
 
   .content {
     padding-bottom: 0px;
-    margin-left: 100px;
+    margin-left: 40px;
     text-align: center;
   }
   

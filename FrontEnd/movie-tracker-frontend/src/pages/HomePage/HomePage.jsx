@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export default function HomePage() {
   return (
     <div className="body">
-    
       <div className="mainPage">
         <div className="container-md p-5 my-5 flex-fill">
           <h1>🎬 Welcome to Mel's Movie Tracker 🎬</h1>
@@ -22,7 +21,9 @@ export default function HomePage() {
               <p>
                 Click here to start adding movies to your personalized tracker!
               </p>
-              <button><Link to="/create">Create Tracker</Link></button>
+              <button>
+                <Link to="/create">Create Tracker</Link>
+              </button>
             </div>
             <div className="col-sm-4">
               <h3>View Your Movie List</h3>
@@ -30,7 +31,9 @@ export default function HomePage() {
                 Click here to the Movie View Page to see the movies on your
                 list!
               </p>
-              <button><Link to="/movieviewpage">Movie View Page</Link></button>
+              <button>
+                <Link to="/movieviewpage">Movie View Page</Link>
+              </button>
             </div>
           </div>
         </div>

@@ -79,7 +79,8 @@ async function getMovies(req,res){
 async function deletedMovie(req,res){
     try{
         const deletedMovie = await Movie.findByIdAndDelete(req.params.id);
-        res.status(200).redirect('/movies');
+        // res.status(200).redirect('/movies');
+        res.json(deletedMovie)
     }catch(error){
         res.status(400).json({error: error.message});
     }
@@ -88,7 +89,8 @@ async function deletedMovie(req,res){
 async function updateMovie(req,res){
     try{
         const updateMovie= await Movie.findByIdAndUpdate(req.params.id,req.body, {new: true});
-        res.status(200).redirect('/movies');
+        // res.status(200).redirect('/movies');
+        res.json(updateMovie)
     }catch(error){
         res.status(400).json({error: error.message});
     }

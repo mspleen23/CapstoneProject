@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect} from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import "./MovieShowPage.css";
 
 export default function MovieShowPage() {
     const{ id }= useParams();
-    const [movie, setMovie] = useState([]);
+    const navigate = useNavigate()
+    const [movie, setMovie] = useState({});
 
 
   useEffect(() => {
@@ -22,6 +23,51 @@ export default function MovieShowPage() {
 
     getMovie();
   }, [id]);
+
+  
+  async function handleDelete() {
+    const confirmDelete = window.confirm("Are you sure you want to delete this movie?");
+    if (!confirmDelete) return;
+
+    try {
+      const response = await fetch(`http://localhost:5050/movies/${id}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        navigate("/movieviewpage"); 
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async function handleEdit() {
+    navigate('/editmovie', {state: {movie}});
+    // const updateMovie = {
+    //   ...movie,
+    //   // review: prompt("Enter new review:", movie.review) || movie.review,
+    // };
+
+    // try {
+    //   const response = await fetch(`http://localhost:5050/movies/${id}`, {
+    //     method: "PUT",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(updateMovie),
+    //   });
+
+    //   if (response.ok) {
+    //     const data = await response.json();
+    //     setMovie(data);
+    //     alert("Movie updated!");
+    //     navigate(`/movies/${id}`);
+    //     }
+    // } catch (error) {
+    //   console.error(error);
+    // }
+  }
+
+
 
   return (
     <div className="main">
@@ -42,6 +88,12 @@ export default function MovieShowPage() {
               <p><strong>Watched:</strong>{movie.watched} </p>
               <a href={movie.trailerURL} target="_blank" rel="noopener noreferrer">Watch Trailer</a>
             </div>
+
+            <div className="buttons">
+            <button onClick={handleDelete}>Delete Movie</button>
+            <button onClick={handleEdit}>Update Movie</button>
+
+          </div>
       </div>
       </div>
   );

@@ -40,32 +40,32 @@ export default function HomePage() {
           <p>Check them out! Add it to your Movie List!</p>
 
           <div className="moviePosters">
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
+            <div className="d-flex justify-content-between">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/waitingtoex.jpeg"
                   alt="Waiting to Exhale Movie Poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/americangangster.jpeg"
                   alt="American Gangster Poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/dothert.jpeg"
                   alt="Do the right thing poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/meangirls.jpeg"
                   alt="Mean Girls poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/mtf.jpeg"
                   alt="Meet the Fockers poster"
@@ -73,32 +73,32 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
+            <div className="d-flex justify-content-between">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/blinktwice .jpeg"
                   alt="Blink Twice poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/notebook.jpeg"
                   alt="The Notebook poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/pineapple.jpeg"
                   alt="Pineapple Express poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/flight.jpeg"
                   alt="Flight poster"
                 />
               </div>
-              <div class="p-2">
+              <div className="p-2">
                 <img
                   src="./public/MoviePosters/unbreakable.jpeg"
                   alt="Unbreakable poster"

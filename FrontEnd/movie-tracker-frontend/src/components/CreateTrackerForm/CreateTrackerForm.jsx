@@ -113,7 +113,7 @@ export default function CreateTrackerForm() {
         onChange={(e) =>
           setFormData({ ...formData, watched: e.target.checked })
         }
-      />
+      /><br></br>
 
       <label htmlFor="posterURL">Movie Poster:</label>
       <input
@@ -125,7 +125,7 @@ export default function CreateTrackerForm() {
       ></input>
       <br></br>
 
-      <label htmlFor="trailerURL">Trailor:</label>
+      <label htmlFor="trailerURL">Trailer:</label>
       <input
         type="text"
         name="trailerURL"

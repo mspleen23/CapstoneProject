@@ -6,11 +6,10 @@
     text-align: center;
     padding: 1rem 0;
     bottom: 0;
-    margin-left: 100px; 
+    margin-left: 130px; 
   }
 
-  .content {
-    padding-bottom: 0px;
+  .content p {
     margin-left: 40px;
     text-align: center;
   }

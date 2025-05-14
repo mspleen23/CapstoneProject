@@ -7,6 +7,7 @@ export default function Footer() {
     <footer className="footer">
      <div className="content">
       <p>© 2025 Capstone Project Movie Tracker</p>
+      <p>Melissa Spleen</p>
      </div>
     </footer>
   );

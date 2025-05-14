@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 import "./CreateTracker.css"
-// import CreateTrackerForm from "../../components/CreateTrackerForm/CreateTrackerForm.jsx"
+import CreateTrackerForm from '../../components/CreateTrackerForm/CreateTrackerForm';
 import {Link} from "react-router-dom";
 
 export default function CreateTracker() {

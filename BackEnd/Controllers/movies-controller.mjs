@@ -22,7 +22,7 @@ try{
     year: "2000",
     description:"Bruce Willis plays a man who survives a horrific train crash seemingly unharmed, discovering he may possess superhuman abilities." ,
     rating:"", 
-    review:" ",
+    review:"",
     watched: true,
     posterURL:"https://m.media-amazon.com/images/S/pv-target-images/95f48c6cca01dfc95c51d0d6624c77c2c91cb92afdd01884c516a46a514dfcc6.jpg" ,
     trailerURL: "https://youtu.be/fNeCB2ALNoA"
@@ -57,7 +57,7 @@ try{
     rating: "⭐⭐⭐⭐", 
     review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu molestie magna. Vestibulum quis rhoncus felis. Ut volutpat consequat magna sit amet feugiat. Morbi rutrum mi nec augue tempor, vitae viverra felis tincidunt.",
     watched:true,
-    posterURL: "",
+    posterURL: "https://play-lh.googleusercontent.com/i_u15aqDdYGmYscHjvNFyItnyRJibrdUHUVZlmvUkC8h33q3H5HsBtEIPu5g1e9IzxQ=w240-h480-rw",
     trailerURL: "https://youtu.be/BWZt4v6b1hI"
 },
 ) 

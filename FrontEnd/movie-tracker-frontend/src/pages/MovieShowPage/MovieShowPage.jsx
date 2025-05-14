@@ -39,7 +39,7 @@ export default function MovieShowPage() {
               <p><strong>Year:</strong> {movie.year}</p>
               <p><strong>Rating:</strong> {movie.rating || "No rating yet"}</p>
               <p><strong>Review:</strong> {movie.review || "No review yet"}</p>
-              <p><strong>Watched:</strong> {movie.watched} </p>
+              <p><strong>Watched:</strong>{movie.watched} </p>
               <a href={movie.trailerURL} target="_blank" rel="noopener noreferrer">Watch Trailer</a>
             </div>
       </div>

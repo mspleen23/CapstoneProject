@@ -44,28 +44,31 @@ export default function MovieShowPage() {
 
   async function handleEdit() {
     navigate("/editmovie", { state: { movie } });
-    const updateMovie = {
-      ...movie,
-      // review: prompt("Enter new review:", movie.review) || movie.review,
-    };
 
-    try {
-      const response = await fetch(`http://localhost:5050/movies/${id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updateMovie),
-      });
 
-      if (response.ok) {
-        const data = await response.json();
-        setMovie(data);
-        alert("Movie updated!");
-        navigate(`/movies/${id}`);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  }
+    
+  //   const updateMovie = {
+  //     ...movie,
+  //     // review: prompt("Enter new review:", movie.review) || movie.review,
+  //   };
+
+  //   try {
+  //     const response = await fetch(`http://localhost:5050/movies/${id}`, {
+  //       method: "PUT",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify(updateMovie),
+  //     });
+
+  //     if (response.ok) {
+  //       const data = await response.json();
+  //       setMovie(data);
+  //       alert("Movie updated!");
+  //       navigate(`/movies/${id}`);
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+   }
 
   return (
     <div className="main">

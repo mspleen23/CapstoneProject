@@ -10,33 +10,32 @@
 
   header{
     padding-top: 45px;
-  }
 
-
-  .movie-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
   }
   
   .movie-card {
-    background-color: #223139;
+    background-color: #37474f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 200px;
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .movie-card img {
     width: 100%;
-    height: auto;
+    /* height: 320px; */
     border-radius: 5px;
     margin-bottom: 1rem;
+    display: block;
   }
   
-  .movie-card h3 {
-    margin-top:1rem
-  }
+
+
+  
+  

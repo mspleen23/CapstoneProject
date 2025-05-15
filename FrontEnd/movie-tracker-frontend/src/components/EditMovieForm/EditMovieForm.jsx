@@ -14,27 +14,30 @@ export default function EditMovieForm() {
     year: movie?.year || "",
     rating: movie?.rating || "",
     review: movie?.review || "",
-    watched: movie?.watched || "No",
+    watched: movie?.watched || "",
     posterURL: movie?.posterURL || "",
-    trailerURL: movie?.trailerURL || ""
+    trailerURL: movie?.trailerURL || "",
   });
 
-  function handleChange(e){
+  function handleChange(e) {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-  };
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5050/movies/${movie._id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        `http://localhost:5050/movies/${movie._id}`,
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (response.ok) {
         alert("Movie updated successfully!");
@@ -43,13 +46,13 @@ export default function EditMovieForm() {
     } catch (error) {
       console.error(error);
     }
-  };
+  }
 
   return (
     <div className="edit-form-container">
       <div className="edit-form-header">
-      <h2> ⏪ Edit Your Movie ⏪ </h2>
-      <p>Anything changed??? Edit it here! </p>
+        <h2> ⏪ Edit Your Movie ⏪ </h2>
+        <p>Anything changed??? Edit it here! </p>
       </div>
 
       <form className="edit-movie-form" onSubmit={handleSubmit}>
@@ -96,12 +99,14 @@ export default function EditMovieForm() {
 
         <label>
           Rating:
-          <input
-            type="text"
-            name="rating"
-            value={formData.rating}
-            onChange={handleChange}
-          />
+          <select name="rating" value={formData.rating} onChange={handleChange}>
+            <option value="">Select Rating</option>
+            <option value="⭐️">⭐️</option>
+            <option value="⭐️⭐️">⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+            <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+          </select>
         </label>
 
         <label>

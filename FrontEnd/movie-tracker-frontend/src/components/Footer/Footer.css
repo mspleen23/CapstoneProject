@@ -11,13 +11,6 @@
 
   .content p {
     margin-left: -60px;
-    /* text-align: center; */
   }
   
-  /* Mobile-friendly */
-  @media (max-width: 768px) {
-    .footer {
-      margin-left: 0;
-    }
-  }
   

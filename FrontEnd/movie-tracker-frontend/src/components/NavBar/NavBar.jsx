@@ -1,22 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './NavBar.css';
-import logo from '../../assets/MovieLogo.webp'
-import userProfile from '../../assets/avatar-1295399_640.webp'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
+import logo from "../../assets/MovieLogo.webp";
+import userProfile from "../../assets/avatar-1295399_640.webp";
 
 export default function NavBar() {
   return (
     <div className="sidebar">
       <div className="logo-section">
-        <img src={logo} alt="Logo" className="logo"/> <br></br>
+        <img src={logo} alt="Logo" className="logo" /> <br></br>
         <h1>Movie Tracker</h1>
       </div>
 
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/movieviewpage">Movie View Page</Link></li>
-          <li><Link to="/create">Create Movie Tracker</Link></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/movieviewpage">Movie View Page</Link>
+          </li>
+          <li>
+            <Link to="/create">Create Movie Tracker</Link>
+          </li>
         </ul>
       </nav>
 
@@ -26,4 +32,3 @@ export default function NavBar() {
     </div>
   );
 }
-

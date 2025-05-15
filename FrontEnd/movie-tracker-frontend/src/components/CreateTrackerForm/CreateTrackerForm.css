@@ -49,3 +49,9 @@ button {
 button:hover {
   background-color: #153433;
 }
+
+select {
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+}

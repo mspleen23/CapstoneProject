@@ -1,21 +1,21 @@
 import React, { useState } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./CreateTrackerForm.css";
 
-export default function CreateTrackerForm(){
-const [formData, setFormData] = useState({
-  movieName: "",
-  genre:"",
-  year: "",
-  description:"",
-  rating:"",
-  review:"",
-  watched: false,
-  posterURL:"",
-  trailerURL:"",
-});
+export default function CreateTrackerForm() {
+  const [formData, setFormData] = useState({
+    movieName: "",
+    genre: "",
+    year: "",
+    description: "",
+    rating: "",
+    review: "",
+    watched: false,
+    posterURL: "",
+    trailerURL: "",
+  });
 
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   function handleChange(e) {
     setFormData({
@@ -35,11 +35,11 @@ const navigate = useNavigate();
         body: JSON.stringify(formData),
       });
 
-        const data = await response.json();
-        navigate("/movieviewpage"); 
-        }catch (error) {
-          console.error(error);
-        }
+      const data = await response.json();
+      navigate("/movieviewpage");
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (
@@ -89,13 +89,20 @@ const navigate = useNavigate();
       <br />
 
       <label htmlFor="rating">Rating:</label>
-      <input
-        type="text"
+      <select
         id="rating"
         name="rating"
         value={formData.rating}
         onChange={handleChange}
-      />
+      >
+        <option value="">Select Rating</option>
+        <option value="⭐️">⭐️</option>
+        <option value="⭐️⭐️">⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️">⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️</option>
+        <option value="⭐️⭐️⭐️⭐️⭐️">⭐️⭐️⭐️⭐️⭐️</option>
+      </select>
+
       <br />
 
       <label htmlFor="review">Review:</label>

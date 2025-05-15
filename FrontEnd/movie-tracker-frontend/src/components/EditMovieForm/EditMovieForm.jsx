@@ -14,7 +14,7 @@ export default function EditMovieForm() {
     year: movie?.year || "",
     rating: movie?.rating || "",
     review: movie?.review || "",
-    watched: movie?.watched || false,
+    watched: movie?.watched || "No",
     posterURL: movie?.posterURL || "",
     trailerURL: movie?.trailerURL || ""
   });
@@ -113,15 +113,13 @@ export default function EditMovieForm() {
           />
         </label>
 
-        <label style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "15px" }}>
-          Watched:
+        <label>
+          Watched?:
           <input
-            type="checkbox"
+            type="text"
             name="watched"
-            checked={formData.watched}
-            onChange={(e) =>
-              setFormData({ ...formData, watched: e.target.checked })
-            }
+            value={formData.watched}
+            onChange={handleChange}
           />
         </label>
 

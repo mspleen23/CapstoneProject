@@ -108,9 +108,9 @@ const navigate = useNavigate();
       />
       <br />
 
-      <label htmlFor="watched" style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "15px" }}>Watched?</label>
+      <label htmlFor="watched">Watched?:</label>
       <input
-        type="checkbox"
+        type="text"
         id="watched"
         name="watched"
         checked={formData.watched}

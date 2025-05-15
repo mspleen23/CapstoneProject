@@ -22,15 +22,17 @@ export default function MovieViewPage() {
   }, []);
 
   return (
-    <div className="main">
+    <div className="view-page-main">
       <header>
-        <h1>🍿 Your Movie List! 🍿</h1>
-        <p>Feel free to add, delete or update your movies!</p>
+        <div className="view-page-header">
+          <h1>🍿 Your Movie List! 🍿</h1>
+          <p>Feel free to add, delete or update your movies!</p>
+        </div>
       </header>
 
-      <div className="movie-container">
+      <div className="view-page-movie-container">
         {viewpage && viewpage.map((movie) => (
-            <div key={movie._id} className="movie-card">
+            <div key={movie._id} className="view-page-movie-card">
               <img src={movie.posterURL} alt={movie.movieName} />
               <Link to={`/movies/${movie._id}`}><h3>{movie.movieName}</h3></Link>
               <p>{movie.year}</p>

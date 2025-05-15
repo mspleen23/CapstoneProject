@@ -3,21 +3,21 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./EditMovieForm.css";
 
 export default function EditMovieForm() {
-  // const [formData, setFormData] = useState({
-  //   movieName: movie.movieName || "",
-  //   description: movie.description || "",
-  //   genre: movie.genre || "",
-  //   year: movie.year || "",
-  //   rating: movie.rating || "",
-  //   review: movie.review || "",
-  //   watched: movie.watched || false,
-  //   posterURL: movie.posterURL || "",
-  //   trailerURL: movie.trailerURL || ""
-  // });
-
   const navigate = useNavigate();
   const { state } = useLocation();
   const { movie } = state;
+
+  const [formData, setFormData] = useState({
+    movieName: movie?.movieName || "",
+    description: movie?.description || "",
+    genre: movie?.genre || "",
+    year: movie?.year || "",
+    rating: movie?.rating || "",
+    review: movie?.review || "",
+    watched: movie?.watched || false,
+    posterURL: movie?.posterURL || "",
+    trailerURL: movie?.trailerURL || ""
+  });
 
   function handleChange(e){
     setFormData({

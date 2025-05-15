@@ -40,7 +40,7 @@ export default function HomePage() {
 
         <div className="container">
           <div className="movie-header">
-          <h1>Some of our Fav Movies this Month</h1>
+          <h1>🌟Some of our Fav Movies this Month🌟</h1>
           <p>Check them out! Add it to your Movie List!</p>
           </div>
 

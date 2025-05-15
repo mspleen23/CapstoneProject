@@ -1,3 +1,12 @@
+/* GLOBAL SAFETY RESET */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .mainPage {
   background: linear-gradient(135deg, #283b4f, #001317);
   text-align: center;
@@ -9,24 +18,26 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  margin-left:  150px;
+  margin-left:  100px;
 }
 
 .container-md h1 {
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 25px;
+  margin-left:-10px;
 }
 
 .container-md p {
   font-size: 1.5rem;
   line-height: 1.5;
+  margin-left:-10px;
 }
 
 .container .row {
   margin-top: 30px;
-  margin-left: 135px;
-  display: flex;
+  margin-left: 180px;
+  display: flex; 
   justify-content: space-around;
   width: max-content;
 }
@@ -43,13 +54,28 @@
   margin-left: 20px;
 }
 
+.container{
+  margin-left:-10px;
+}
+
 .movie-header{
 padding-bottom: 20px;
 margin-bottom: 30px;
 }
 
 .moviePosters{
-  margin-bottom:50px
+  margin-left:50px;
+  display: flex;
+  flex-direction:column;
+  gap: 20px;
+  margin-bottom: 160px;
+  overflow-x: hidden;
+}
+.moviePosters img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-left:-20px;
 }
 
 .footer-container {

@@ -71,20 +71,21 @@ export default function MovieShowPage() {
    }
 
   return (
-    <div className="main">
-      <header>
+    <div className="show-page-main">
+      <div className="header">
         <h1>🎟️ Movie Show Page 🎟️ </h1>
         <p>Here is more info on the movie you selected</p>
-      </header>
+      </div>
 
-      <div className="content">
-        <div className="movie-container">
-          <div key={movie._id} className="movie-card">
-            <div className="movie-poster">
+      <div className="show-page-content">
+        <div className="show-page-movie-container">
+          <div key={movie._id} className="show-page-movie-card">
+            <div className="show-page-movie-poster">
               <img src={movie.posterURL} alt={movie.movieName} />
               <h3>{movie.movieName}</h3>
             </div>
 
+            <div className="movie-details">
             <p>{movie.description}</p>
             <p>
               <strong>Genre:</strong> {movie.genre}
@@ -109,9 +110,10 @@ export default function MovieShowPage() {
             >
               Watch Trailer
             </a>
+            </div>
           </div>
 
-          <div className="top-buttons">
+          <div className="show-page-buttons">
             <button onClick={handleDelete}>Delete Movie</button>
             <button onClick={handleEdit}>Update Movie</button>
           </div>

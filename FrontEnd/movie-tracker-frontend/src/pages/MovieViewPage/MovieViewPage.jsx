@@ -24,8 +24,8 @@ export default function MovieViewPage() {
   return (
     <div className="main">
       <header>
-        <h1>Your Movie List!</h1>
-        <p>Feel free to add, delete, update your movies!</p>
+        <h1>🍿 Your Movie List! 🍿</h1>
+        <p>Feel free to add, delete or update your movies!</p>
       </header>
 
       <div className="movie-container">

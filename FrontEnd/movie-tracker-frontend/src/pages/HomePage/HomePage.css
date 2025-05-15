@@ -40,10 +40,10 @@ a {
 
 .container .row {
   margin-top: 30px;
-  margin-left: 180px;
+  margin-left: 100px;
   display: flex; 
   justify-content: space-around;
-  width: max-content;
+  width: -400px;
 }
 
 .container .col-sm-4 {
@@ -54,7 +54,7 @@ a {
 }
 
 .container h1{
-  font-size: 2.5rem ;
+  font-size: 3rem ;
   margin-left: 20px;
 }
 

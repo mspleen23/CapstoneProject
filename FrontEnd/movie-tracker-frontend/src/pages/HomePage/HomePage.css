@@ -58,13 +58,17 @@ html, body {
   margin-left:-10px;
 }
 
+.container button:hover {
+  background-color: #12181f;
+}
+
 .movie-header{
 padding-bottom: 20px;
 margin-bottom: 30px;
 }
 
 .moviePosters{
-  margin-left:50px;
+  margin-left:80px;
   display: flex;
   flex-direction:column;
   gap: 20px;

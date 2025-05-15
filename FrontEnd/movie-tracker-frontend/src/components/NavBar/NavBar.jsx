@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../../assets/MovieLogo.webp'
-import userProfile from '../../assets/userIcon.avif'
+import userProfile from '../../assets/avatar-1295399_640.webp'
 
 export default function NavBar() {
   return (

@@ -101,7 +101,7 @@ export default function MovieShowPage() {
             </p>
             <p>
               <strong>Watched?:</strong>
-              {movie.watched}{"No"}
+              {movie.watched}{""}
             </p>
             <a href={movie.trailerURL || "https://www.youtube.com/embed/dQw4w9WgXcQ"} target="_blank" rel="noopener noreferrer">
   Watch Trailer

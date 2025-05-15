@@ -6,7 +6,7 @@ import Footer from './components/Footer/Footer';
 import './App.css'
 
 import HomePage from './pages/HomePage/HomePage.jsx'
-import CreateTracker from './pages/CreateTracker/CreateTracker.jsx';
+import CreateTrackerForm from './components/CreateTrackerForm/CreateTrackerForm.jsx';
 import MovieViewPage from './pages/MovieViewPage/MovieViewPage.jsx';
 import MovieShowPage from './pages/MovieShowPage/MovieShowPage.jsx';
 import EditMovieForm from './components/EditMovieForm/EditMovieForm.jsx';
@@ -18,7 +18,7 @@ function App() {
     <NavBar/>
     <Routes>
       <Route path="/" element={<HomePage/>} />
-      <Route path="/create" element={<CreateTracker/>} /> 
+      <Route path="/create" element={<CreateTrackerForm/>} /> 
       <Route path="/movieviewpage" element={<MovieViewPage/>}/>
       <Route path= "/movies/:id" element={<MovieShowPage/>}/>
       <Route path="/editmovie" element={<EditMovieForm />} />

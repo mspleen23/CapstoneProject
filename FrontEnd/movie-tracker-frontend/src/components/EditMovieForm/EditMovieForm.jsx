@@ -1,33 +1,34 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./EditMovieForm.css";
 
 export default function EditMovieForm() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { movie } = location.state || {};
-
   const [formData, setFormData] = useState({
-    movieName: movie?.movieName || "",
-    description: movie?.description || "",
-    genre: movie?.genre || "",
-    year: movie?.year || "",
-    rating: movie?.rating || "",
-    review: movie?.review || "",
-    trailerURL: movie?.trailerURL || "",
-    posterURL: movie?.posterURL || "",
-    watched: movie?.watched || false,
+    movieName: movie.movieName || "",
+    description: movie.description || "",
+    genre: movie.genre || "",
+    year: movie.year || "",
+    rating: movie.rating || "",
+    review: movie.review || "",
+    watched: movie.watched || false,
+    posterURL: movie.posterURL || "",
+    trailerURL: movie.trailerURL || ""
   });
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
+  const navigate = useNavigate();
+  const { state } = useLocation();
+  const { movie } = state;
+
+  function handleChange(e){
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
+
     try {
       const response = await fetch(`http://localhost:5050/movies/${movie._id}`, {
         method: "PUT",
@@ -40,27 +41,108 @@ export default function EditMovieForm() {
         navigate(`/movies/${movie._id}`);
       }
     } catch (error) {
-      console.error("Error updating movie:", error);
+      console.error(error);
     }
   };
 
   return (
     <div className="edit-form-container">
       <h2>Edit Movie</h2>
-      <form onSubmit={handleSubmit}>
-        <input name="movieName" value={formData.movieName} onChange={handleChange} placeholder="Movie Name" />
-        <textarea name="description" value={formData.description} onChange={handleChange} placeholder="Description" />
-        <input name="genre" value={formData.genre} onChange={handleChange} placeholder="Genre" />
-        <input name="year" value={formData.year} onChange={handleChange} placeholder="Year" />
-        <input name="rating" value={formData.rating} onChange={handleChange} placeholder="Rating" />
-        <input name="review" value={formData.review} onChange={handleChange} placeholder="Review" />
-        <input name="posterURL" value={formData.posterURL} onChange={handleChange} placeholder="Poster URL" />
-        <input name="trailerURL" value={formData.trailerURL} onChange={handleChange} placeholder="Trailer URL" />
+      <form className="edit-movie-form" onSubmit={handleSubmit}>
         <label>
-          <input type="checkbox" name="watched" checked={formData.watched} onChange={handleChange} />
-          Watched
+          Movie Name:
+          <input
+            type="text"
+            name="movieName"
+            value={formData.movieName}
+            onChange={handleChange}
+            required
+          />
         </label>
-        <button type="submit">Save Changes</button>
+
+        <label>
+          Description:
+          <textarea
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            required
+          />
+        </label>
+
+        <label>
+          Genre:
+          <input
+            type="text"
+            name="genre"
+            value={formData.genre}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Year:
+          <input
+            type="number"
+            name="year"
+            value={formData.year}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Rating:
+          <input
+            type="text"
+            name="rating"
+            value={formData.rating}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Review:
+          <textarea
+            name="review"
+            value={formData.review}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Watched:
+          <input
+            type="checkbox"
+            name="watched"
+            checked={formData.watched}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Poster URL:
+          <input
+            type="text"
+            name="posterURL"
+            value={formData.posterURL}
+            onChange={handleChange}
+          />
+        </label>
+
+        <label>
+          Trailer URL:
+          <input
+            type="text"
+            name="trailerURL"
+            value={formData.trailerURL}
+            onChange={handleChange}
+          />
+        </label>
+
+        <div className="edit-buttons">
+          <button type="submit">Update Movie</button>
+          {/* <button type="button" onClick={() => navigate(-1)}>Cancel</button> */}
+        </div>
       </form>
     </div>
   );

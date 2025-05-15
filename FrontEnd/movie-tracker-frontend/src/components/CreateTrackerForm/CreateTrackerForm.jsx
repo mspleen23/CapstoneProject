@@ -93,7 +93,6 @@ const navigate = useNavigate();
         type="text"
         id="rating"
         name="rating"
-        required
         value={formData.rating}
         onChange={handleChange}
       />
@@ -104,7 +103,6 @@ const navigate = useNavigate();
         type="text"
         id="review"
         name="review"
-        required
         value={formData.review}
         onChange={handleChange}
       />

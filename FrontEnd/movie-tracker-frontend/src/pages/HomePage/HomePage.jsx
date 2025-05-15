@@ -9,7 +9,8 @@ export default function HomePage() {
         <div className="container-md p-5 my-5 flex-fill">
           <h1>🎬 Welcome to Mel's Movie Tracker 🎬</h1>
           <p>
-          🎞️ Your personal spotlight for tracking films, shows and favorites in one place. Simple.Easy.Handy 🎞️
+            🎞️ Your personal spotlight for tracking films, shows and favorites
+            in one place. Simple.Easy.Handy 🎞️
           </p>
         </div>
 
@@ -17,30 +18,25 @@ export default function HomePage() {
           <div className="row">
             <div className="col-sm-4">
               <h3>Create Your Movie Tracker</h3>
-              <p>
-                Click here to create or add a movie to your movie tracker!
-              </p>
+              <p>Click here to create or add a movie to your movie tracker!</p>
               <button>
                 <Link to="/create">Create Tracker</Link>
               </button>
             </div>
             <div className="col-sm-4">
               <h3>View Your Movie List</h3>
-              <p>
-                Click here to see the movies on your
-                list!
-              </p>
+              <p>Click here to see the movies on your list!</p>
               <button>
                 <Link to="/movieviewpage">Movie View Page</Link>
               </button>
             </div>
-         </div>
+          </div>
         </div>
 
         <div className="container">
           <div className="movie-header">
-          <h1>🌟Some of our Fav Movies this Month🌟</h1>
-          <p>Check them out! Add it to your Movie List!</p>
+            <h1>🌟Some of our Fav Movies this Month🌟</h1>
+            <p>Check them out! Add it to your Movie List!</p>
           </div>
 
           <div className="moviePosters">

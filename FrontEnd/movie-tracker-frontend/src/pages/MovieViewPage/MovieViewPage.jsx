@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./MovieViewPage.css";
-
 
 export default function MovieViewPage() {
   const [viewpage, setViewpage] = useState([]);
@@ -9,7 +8,7 @@ export default function MovieViewPage() {
   useEffect(() => {
     async function seedMovies() {
       try {
-        const response = await fetch('http://localhost:5050/movies');
+        const response = await fetch("http://localhost:5050/movies");
         const data = await response.json();
         // console.log(data)
         setViewpage(data);
@@ -31,14 +30,17 @@ export default function MovieViewPage() {
       </header>
 
       <div className="view-page-movie-container">
-        {viewpage && viewpage.map((movie) => (
+        {viewpage &&
+          viewpage.map((movie) => (
             <div key={movie._id} className="view-page-movie-card">
               <img src={movie.posterURL} alt={movie.movieName} />
-              <Link to={`/movies/${movie._id}`}><h3>{movie.movieName}</h3></Link>
+              <Link to={`/movies/${movie._id}`}>
+                <h3>{movie.movieName}</h3>
+              </Link>
               <p>{movie.year}</p>
             </div>
           ))}
       </div>
-      </div>
+    </div>
   );
 }

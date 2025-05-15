@@ -44,31 +44,7 @@ export default function MovieShowPage() {
 
   async function handleEdit() {
     navigate("/editmovie", { state: { movie } });
-
-
-    
-  //   const updateMovie = {
-  //     ...movie,
-  //     // review: prompt("Enter new review:", movie.review) || movie.review,
-  //   };
-
-  //   try {
-  //     const response = await fetch(`http://localhost:5050/movies/${id}`, {
-  //       method: "PUT",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(updateMovie),
-  //     });
-
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       setMovie(data);
-  //       alert("Movie updated!");
-  //       navigate(`/movies/${id}`);
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-   }
+  }
 
   return (
     <div className="show-page-main">
@@ -86,27 +62,34 @@ export default function MovieShowPage() {
             </div>
 
             <div className="movie-details">
-            <p>{movie.description}</p>
-            <p>
-              <strong>Genre:</strong> {movie.genre}
-            </p>
-            <p>
-              <strong>Year:</strong> {movie.year}
-            </p>
-            <p>
-              <strong>Rating:</strong> {movie.rating || "No rating yet"}
-            </p>
-            <p>
-              <strong>Review:</strong> {movie.review || "No review yet"}
-            </p>
-            <p>
-              <strong>Watched?:</strong>
-              {movie.watched}{""}
-            </p>
-            <a href={movie.trailerURL || "https://www.youtube.com/embed/dQw4w9WgXcQ"} target="_blank" rel="noopener noreferrer">
-  Watch Trailer
-</a>
-
+              <p>{movie.description}</p>
+              <p>
+                <strong>Genre:</strong> {movie.genre}
+              </p>
+              <p>
+                <strong>Year:</strong> {movie.year}
+              </p>
+              <p>
+                <strong>Rating:</strong> {movie.rating || "No rating yet"}
+              </p>
+              <p>
+                <strong>Review:</strong> {movie.review || "No review yet"}
+              </p>
+              <p>
+                <strong>Watched?:</strong>
+                {movie.watched}
+                {""}
+              </p>
+              <a
+                href={
+                  movie.trailerURL ||
+                  "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Watch Trailer
+              </a>
             </div>
           </div>
 
@@ -114,8 +97,8 @@ export default function MovieShowPage() {
             <button onClick={handleDelete}>Delete Movie</button>
             <button onClick={handleEdit}>Update Movie</button>
           </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 }

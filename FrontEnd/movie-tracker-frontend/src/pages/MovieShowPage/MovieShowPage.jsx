@@ -100,16 +100,9 @@ export default function MovieShowPage() {
               <strong>Review:</strong> {movie.review || "No review yet"}
             </p>
             <p>
-              <strong>Watched:</strong>
+              <strong>Watched?:</strong>
               {movie.watched}{"No"}
             </p>
-            {/* <a
-              href={movie.trailerURL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Watch Trailer
-            </a> */}
             <a href={movie.trailerURL || "https://www.youtube.com/embed/dQw4w9WgXcQ"} target="_blank" rel="noopener noreferrer">
   Watch Trailer
 </a>

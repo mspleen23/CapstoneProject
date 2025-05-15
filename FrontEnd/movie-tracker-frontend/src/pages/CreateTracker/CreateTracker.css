@@ -1,4 +1,21 @@
-.main{
-    margin-left: 150px; 
-    margin-top: -20px;
-}
+.main {
+    background: linear-gradient(135deg, #283b4f, #001317);
+    color: whitesmoke;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+    margin-left: 150px; /* to match your main layout */
+  }
+  
+  .main h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .main p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+  } 
+

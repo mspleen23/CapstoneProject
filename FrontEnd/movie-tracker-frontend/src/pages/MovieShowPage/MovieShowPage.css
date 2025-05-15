@@ -1,0 +1,106 @@
+.main {
+    background: linear-gradient(135deg, #1c2b36, #0a0f13);
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+    min-height: 100vh;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-left: -150px;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .movie-container {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+  
+  }
+  
+  .movie-card {
+    flex: 4;
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+  }
+  
+  .movie-poster img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-poster h3 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    color: #ffd700;
+  }
+  
+  .movie-card p {
+    line-height: 1.6;
+    font-size: 1rem;
+    padding-bottom: -10px;
+  }
+  
+  .movie-card a {
+    color:  #ffd700;
+    text-decoration: underline;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  
+  .top-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding:12px;
+    height:fit-content;
+    background-color: #37474f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+  } 
+
+  button {
+    margin-top: 0px;
+  }
+    
+  .buttons button:hover {
+    background-color: #607d8b;
+  }
+  
+  /* Responsive adjustments
+  @media (max-width: 768px) {
+    .movie-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .movie-poster img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .buttons {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+  }
+   */

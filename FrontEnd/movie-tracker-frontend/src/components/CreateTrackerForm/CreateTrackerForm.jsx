@@ -110,7 +110,7 @@ const navigate = useNavigate();
       />
       <br />
 
-      <label htmlFor="watched">I saw this movie:</label>
+      <label htmlFor="watched" style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "15px" }}>Watched?</label>
       <input
         type="checkbox"
         id="watched"

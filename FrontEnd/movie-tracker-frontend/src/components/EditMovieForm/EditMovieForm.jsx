@@ -113,13 +113,15 @@ export default function EditMovieForm() {
           />
         </label>
 
-        <label>
+        <label style={{ display: "flex", alignItems: "center", gap: "10px", marginTop: "15px" }}>
           Watched:
           <input
             type="checkbox"
             name="watched"
             checked={formData.watched}
-            onChange={handleChange}
+            onChange={(e) =>
+              setFormData({ ...formData, watched: e.target.checked })
+            }
           />
         </label>
 

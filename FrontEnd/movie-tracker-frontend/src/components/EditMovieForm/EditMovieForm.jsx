@@ -147,7 +147,6 @@ export default function EditMovieForm() {
 
         <div className="edit-buttons">
           <button type="submit">Update Movie</button>
-          {/* <button type="button" onClick={() => navigate(-1)}>Cancel</button> */}
         </div>
       </form>
     </div>

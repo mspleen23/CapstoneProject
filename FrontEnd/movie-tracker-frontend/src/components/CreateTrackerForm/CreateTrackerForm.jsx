@@ -125,7 +125,6 @@ const navigate = useNavigate();
         type="text"
         id="posterURL"
         name="posterURL"
-        required
         value={formData.posterURL}
         onChange={handleChange}
       />
@@ -136,7 +135,6 @@ const navigate = useNavigate();
         type="text"
         id="trailerURL"
         name="trailerURL"
-        required
         value={formData.trailerURL}
         onChange={handleChange}
       />

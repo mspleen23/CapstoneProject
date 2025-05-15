@@ -47,7 +47,11 @@ export default function EditMovieForm() {
 
   return (
     <div className="edit-form-container">
-      <h2>Edit Movie</h2>
+      <div className="edit-form-header">
+      <h2> ⏪ Edit Your Movie ⏪ </h2>
+      <p>Anything changed??? Edit it here! </p>
+      </div>
+
       <form className="edit-movie-form" onSubmit={handleSubmit}>
         <label>
           Movie Name:

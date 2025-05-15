@@ -21,6 +21,10 @@ html, body {
   margin-left:  100px;
 }
 
+a {
+  color: whitesmoke
+}
+
 .container-md h1 {
   font-size: 3.5rem;
   font-weight: bold;
@@ -60,6 +64,7 @@ html, body {
 
 .container button:hover {
   background-color: #12181f;
+  color: whitesmoke;
 }
 
 .movie-header{

@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./MovieViewPage.css";
 
+
 export default function MovieViewPage() {
   const [viewpage, setViewpage] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => { //runs the code after component first appears on the screen 
     async function seedMovies() {
       try {
         const response = await fetch("http://localhost:5050/movies");
         const data = await response.json();
-        // console.log(data)
         setViewpage(data);
       } catch (error) {
         console.error(error);

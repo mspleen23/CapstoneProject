@@ -26,6 +26,7 @@ export default function EditMovieForm() {
     });
   }
 
+  //using PUT to allow users to update movie information 
   async function handleSubmit(e) {
     e.preventDefault();
 
@@ -46,7 +47,8 @@ export default function EditMovieForm() {
     } catch (error) {
       console.error(error);
     }
-  }
+  } //sends the updated data to my backend using PUT. The backend updates the data and then redirects the user to the movie list page.
+
 
   return (
     <div className="edit-form-container">

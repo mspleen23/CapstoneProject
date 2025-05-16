@@ -24,8 +24,9 @@ export default function CreateTrackerForm() {
     });
   }
 
+  //using POST in the handle Submit to create a new movie entry
   async function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); //stops page from reloading
     try {
       const response = await fetch("http://localhost:5050/movies", {
         method: "POST",
@@ -40,7 +41,7 @@ export default function CreateTrackerForm() {
     } catch (error) {
       console.error(error);
     }
-  }
+  } //sends the form data to my backend using POST. The backend saves the data and then redirects the user to the movie list page.
 
   return (
     <form onSubmit={handleSubmit}>

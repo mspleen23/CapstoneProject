@@ -14,7 +14,7 @@ export default function EditMovieForm() {
     year: movie?.year || "",
     rating: movie?.rating || "",
     review: movie?.review || "",
-    watched: movie?.watched || "",
+    watched: movie?.watched === true ? "Yes" : "No",
     posterURL: movie?.posterURL || "",
     trailerURL: movie?.trailerURL || "",
   });
@@ -26,17 +26,22 @@ export default function EditMovieForm() {
     });
   }
 
-  //using PUT to allow users to update movie information 
+  //using PUT to allow users to update movie information
   async function handleSubmit(e) {
     e.preventDefault();
 
+    const formattedData = {
+      ...formData,
+      watched: formData.watched === "Yes",
+    };
+  
     try {
       const response = await fetch(
         `http://localhost:5050/movies/${movie._id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(formattedData),
         }
       );
 
@@ -48,7 +53,6 @@ export default function EditMovieForm() {
       console.error(error);
     }
   } //sends the updated data to my backend using PUT. The backend updates the data and then redirects the user to the movie list page.
-
 
   return (
     <div className="edit-form-container">
@@ -122,12 +126,14 @@ export default function EditMovieForm() {
 
         <label>
           Watched?:
-          <input
-            type="text"
+          <select
             name="watched"
             value={formData.watched}
             onChange={handleChange}
-          />
+          >
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
         </label>
 
         <label>

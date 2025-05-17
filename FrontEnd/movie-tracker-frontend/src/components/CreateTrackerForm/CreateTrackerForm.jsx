@@ -10,7 +10,7 @@ export default function CreateTrackerForm() {
     description: "",
     rating: "",
     review: "",
-    watched: false,
+    watched: "No",
     posterURL: "",
     trailerURL: "",
   });
@@ -27,13 +27,18 @@ export default function CreateTrackerForm() {
   //using POST in the handle Submit to create a new movie entry
   async function handleSubmit(e) {
     e.preventDefault(); //stops page from reloading
+    const formattedData = {
+      ...formData,
+      watched: formData.watched === "Yes",
+    };
+
     try {
       const response = await fetch("http://localhost:5050/movies", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formattedData),
       });
 
       const data = await response.json();
@@ -69,7 +74,7 @@ export default function CreateTrackerForm() {
 
       <label htmlFor="year">Year:</label>
       <input
-        type="text"
+        type="number"
         id="year"
         name="year"
         required
@@ -116,16 +121,17 @@ export default function CreateTrackerForm() {
       />
       <br />
 
-      <label htmlFor="watched">Watched?:</label>
-      <input
-        type="text"
+      <label htmlFor="watched">Watched?: </label>
+      <select
         id="watched"
         name="watched"
-        checked={formData.watched}
-        onChange={(e) =>
-          setFormData({ ...formData, watched: e.target.checked })
-        }
-      />
+        value={formData.watched}
+        onChange={handleChange}
+      >
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    
       <br />
 
       <label htmlFor="posterURL">Movie Poster:</label>

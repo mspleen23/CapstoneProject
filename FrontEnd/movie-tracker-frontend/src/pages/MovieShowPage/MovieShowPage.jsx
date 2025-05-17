@@ -77,7 +77,7 @@ export default function MovieShowPage() {
               </p>
               <p>
                 <strong>Watched?:</strong>
-                {movie.watched}
+                {movie.watched ? "Yes" : "No"} 
                 {""}
               </p>
               <a
